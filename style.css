@@ -1,0 +1,417 @@
+
+/* =========================================
+   CodeAlpha - Phishing Awareness Training
+   Main stylesheet
+   ========================================= */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background-color: #102a43;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #62d5fa;
+}
+
+/* Main hero section */
+.hero {
+    background: linear-gradient(135deg, #102a43, #176b87);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 28px;
+    font-size: 18px;
+    color: #e1f5fe;
+}
+
+.hero button,
+button {
+    background-color: #087e8b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.hero button {
+    background-color: #ffffff;
+    color: #102a43;
+}
+
+.hero button:hover {
+    background-color: #d9f3ff;
+    transform: translateY(-2px);
+}
+
+button:hover {
+    background-color: #05636d;
+    transform: translateY(-2px);
+}
+
+/* Main content sections */
+section {
+    padding: 55px 8%;
+}
+
+section h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section > p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+/* Content cards and grids */
+.cards,
+.card-container,
+.tips-container,
+.warning-container,
+.phishing-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.card,
+.tip-card,
+.warning-card,
+.type-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(16, 42, 67, 0.08);
+    border: 1px solid #e3eaf1;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover,
+.tip-card:hover,
+.warning-card:hover,
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(16, 42, 67, 0.13);
+}
+
+.card h3,
+.tip-card h3,
+.warning-card h3,
+.type-card h3 {
+    color: #087e8b;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+/* Warning signs */
+.warning-card {
+    border-top: 4px solid #e5a000;
+}
+
+/* Safety tips */
+.tip-card {
+    border-top: 4px solid #087e8b;
+}
+
+/* Demonstration sections */
+.demo,
+.email-demo,
+.domain-check,
+.quiz-container {
+    max-width: 850px;
+    margin: 30px auto 0;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(16, 42, 67, 0.08);
+    border: 1px solid #e3eaf1;
+}
+
+/* Fake phishing email demonstration */
+.email-header {
+    background-color: #eef3f8;
+    padding: 15px;
+    border-radius: 7px;
+    margin-bottom: 18px;
+}
+
+.email-header p {
+    margin: 5px 0;
+    overflow-wrap: anywhere;
+}
+
+.email-body {
+    padding: 10px 0;
+}
+
+.email-body p {
+    margin-bottom: 12px;
+}
+
+.email-warning {
+    color: #c0392b;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Highlight suspicious links */
+.suspicious-link {
+    color: #c0392b;
+    text-decoration: underline;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #087e8b;
+    border-color: #087e8b;
+}
+
+/* Quiz questions */
+.question {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e3eaf1;
+}
+
+.question h3 {
+    font-size: 17px;
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.question label {
+    display: block;
+    padding: 9px 12px;
+    margin: 7px 0;
+    background-color: #f4f7fb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.question label:hover {
+    background-color: #e1f5fe;
+}
+
+.question input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #087e8b;
+}
+
+/* Quiz result and feedback */
+#quiz-result,
+#result,
+#demo-result,
+#domain-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 7px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#quiz-result:empty,
+#result:empty,
+#demo-result:empty,
+#domain-result:empty {
+    display: none;
+}
+
+/* Lists */
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Information and warning boxes */
+.info-box {
+    background-color: #e1f5fe;
+    border-left: 5px solid #087e8b;
+    padding: 18px;
+    margin: 22px 0;
+    border-radius: 5px;
+}
+
+.warning-box {
+    background-color: #fff4e5;
+    border-left: 5px solid #e5a000;
+    padding: 18px;
+    margin: 22px 0;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #102a43;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    overflow-wrap: anywhere;
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .demo,
+    .email-demo,
+    .domain-check,
+    .quiz-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .cards,
+    .card-container,
+    .tips-container,
+    .warning-container,
+    .phishing-types {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 32px 18px;
+    }
+}

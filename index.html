@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing Awareness Training | CodeAlpha</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <h1>🛡️ CyberAware</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="#learn">Learn</a>
+            <a href="#warning-signs">Warning Signs</a>
+            <a href="#demo">Demo</a>
+            <a href="#domain-check">Domain Checker</a>
+            <a href="#safety-tips">Safety Tips</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Pause. Check. Don't Get Hooked.</h2>
+
+            <p>
+                Learn how to recognize phishing attacks, identify
+                suspicious messages, and protect your personal
+                information online.
+            </p>
+
+            <button type="button"
+                onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">
+                Start Learning
+            </button>
+        </section>
+
+        <!-- Introduction -->
+        <section id="learn">
+            <h2>What Is Phishing?</h2>
+
+            <p>
+                Phishing is a type of cyberattack in which attackers
+                pretend to be trusted people or organizations to trick
+                users into revealing sensitive information, clicking
+                malicious links, or downloading harmful attachments.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>📧 Email Phishing</h3>
+                    <p>
+                        Attackers send fake emails that imitate banks,
+                        companies, or other trusted organizations to
+                        steal personal information.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>📱 Smishing</h3>
+                    <p>
+                        Smishing uses fraudulent SMS or text messages
+                        to trick users into clicking suspicious links
+                        or sharing sensitive information.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>☎️ Vishing</h3>
+                    <p>
+                        Vishing uses fraudulent phone calls or voice
+                        messages to obtain passwords, OTPs, and
+                        banking details.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Warning Signs -->
+        <section id="warning-signs">
+            <h2>Common Warning Signs of Phishing</h2>
+
+            <p>
+                Recognizing these warning signs can help you avoid
+                phishing attacks.
+            </p>
+
+            <div class="cards">
+
+                <article class="warning-card">
+                    <h3>⚠️ Urgent Messages</h3>
+                    <p>
+                        Messages that threaten to close your account
+                        or demand immediate action.
+                    </p>
+                </article>
+
+                <article class="warning-card">
+                    <h3>🔗 Suspicious Links</h3>
+                    <p>
+                        Links with unfamiliar domains, misspellings,
+                        or misleading website addresses.
+                    </p>
+                </article>
+
+                <article class="warning-card">
+                    <h3>🔑 Personal Information Requests</h3>
+                    <p>
+                        Unexpected requests for passwords, OTPs,
+                        banking details, or confidential information.
+                    </p>
+                </article>
+
+                <article class="warning-card">
+                    <h3>📎 Unexpected Attachments</h3>
+                    <p>
+                        Unusual attachments that may contain malicious
+                        files or lead to unsafe downloads.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Phishing Email Demonstration -->
+        <section id="demo">
+            <h2>Phishing Email Demonstration</h2>
+
+            <p>
+                Examine this fictional email and learn why it may
+                be suspicious. This is a safe educational example.
+            </p>
+
+            <div class="email-demo">
+
+                <div class="email-header">
+                    <p><strong>From:</strong>
+                        Security Team &lt;alert@unfamiliar-domain.example&gt;
+                    </p>
+
+                    <p><strong>Subject:</strong>
+                        URGENT: Verify Your Account!
+                    </p>
+
+                    <p><strong>Message:</strong></p>
+                </div>
+
+                <div class="email-body">
+                    <p>Hello User,</p>
+
+                    <p>
+                        We detected unusual activity on your account.
+                        Your account may be blocked unless you verify
+                        your information immediately.
+                    </p>
+
+                    <p>
+                        Click the button below to review this
+                        demonstration.
+                    </p>
+
+                    <button id="demo-button" type="button">
+                        Examine Email
+                    </button>
+
+                    <div id="demo-result"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Domain Checker -->
+        <section id="domain-check">
+            <h2>Basic Suspicious Domain Checker</h2>
+
+            <p>
+                Enter a website domain to check it against a few
+                predefined suspicious patterns. This is an educational
+                demonstration, not a complete phishing detection system.
+            </p>
+
+            <div class="domain-check">
+
+                <label for="domain-input">
+                    Enter a website domain:
+                </label>
+
+                <input
+                    type="text"
+                    id="domain-input"
+                    placeholder="Example: example.com"
+                    autocomplete="off"
+                >
+
+                <button id="domain-button" type="button">
+                    Check Domain
+                </button>
+
+                <div id="domain-result"
+                    role="status"
+                    aria-live="polite">
+                </div>
+
+                <div class="info-box">
+                    <strong>Safety tip:</strong>
+                    A website passing this basic check does not mean
+                    it is safe. Verify domains using official sources
+                    and never enter credentials on unfamiliar websites.
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Safety Tips -->
+        <section id="safety-tips">
+            <h2>How to Protect Yourself</h2>
+
+            <div class="cards">
+
+                <article class="tip-card">
+                    <h3>1. Think Before Clicking</h3>
+                    <p>
+                        Avoid clicking unexpected links or opening
+                        suspicious attachments.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <h3>2. Verify the Sender</h3>
+                    <p>
+                        Check the sender's address and confirm
+                        unexpected requests through official channels.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <h3>3. Protect Your Passwords</h3>
+                    <p>
+                        Use strong, unique passwords and never share
+                        your passwords or OTPs with others.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <h3>4. Enable MFA</h3>
+                    <p>
+                        Use multi-factor authentication to add an
+                        additional layer of account security.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <h3>5. Keep Software Updated</h3>
+                    <p>
+                        Update your operating system, browser,
+                        applications, and security software.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <h3>6. Report Phishing</h3>
+                    <p>
+                        Report suspicious emails and messages using
+                        your organization's or platform's reporting tools.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Interactive Quiz -->
+        <section id="quiz">
+            <h2>Phishing Awareness Quiz</h2>
+
+            <p>
+                Test your knowledge by answering all four questions.
+            </p>
+
+            <div class="quiz-container">
+
+                <form id="quiz-form">
+
+                    <!-- Question 1 -->
+                    <div class="question">
+                        <h3>
+                            1. You receive an email threatening to
+                            close your account in 10 minutes.
+                            What should you do?
+                        </h3>
+
+                        <label>
+                            <input type="radio" name="q1" value="a">
+                            Click the link immediately.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q1" value="b">
+                            Verify through the official website or app.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q1" value="c">
+                            Reply with your password.
+                        </label>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question">
+                        <h3>
+                            2. What does HTTPS indicate about a website?
+                        </h3>
+
+                        <label>
+                            <input type="radio" name="q2" value="a">
+                            The website is definitely genuine.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q2" value="b">
+                            The website cannot contain malicious content.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q2" value="c">
+                            The connection is encrypted, but the site
+                            may still be fraudulent.
+                        </label>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">
+                        <h3>
+                            3. A caller asks for your OTP to prevent
+                            a fraudulent transaction. What is safest?
+                        </h3>
+
+                        <label>
+                            <input type="radio" name="q3" value="a">
+                            Do not share it; contact your bank through
+                            an official number.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q3" value="b">
+                            Share it if the caller sounds professional.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q3" value="c">
+                            Send it by text message instead.
+                        </label>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">
+                        <h3>
+                            4. You entered your password on a suspicious
+                            website. What should you do?
+                        </h3>
+
+                        <label>
+                            <input type="radio" name="q4" value="a">
+                            Ignore it unless money disappears.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q4" value="b">
+                            Report it and change the exposed password
+                            from a trusted device.
+                        </label>
+
+                        <label>
+                            <input type="radio" name="q4" value="c">
+                            Forward the suspicious link to friends.
+                        </label>
+                    </div>
+
+                    <button type="submit">
+                        Submit Quiz
+                    </button>
+
+                    <div id="quiz-result"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Final Reminder -->
+        <section>
+            <h2>Remember: Pause, Check, Verify!</h2>
+
+            <p>
+                Stay alert, protect your personal information,
+                and report suspicious activity. A few seconds
+                of checking can help prevent a cyberattack.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            CodeAlpha Cyber Security Internship
+        </p>
+
+        <p>
+            Task 2: Phishing Awareness Training
+        </p>
+
+        <p>
+            Educational project created using HTML, CSS, and JavaScript.
+        </p>
+    </footer>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
